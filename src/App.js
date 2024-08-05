@@ -6,14 +6,13 @@ import './App.css';
 import '@xyflow/react/dist/style.css';
 import Navbar from './Components/Navbar';
 import FlowDiagramCreator from './Components/FlowDiagramCreator';
- 
+
 
 function App() {
   return (
     <>
-    <Navbar/>
-    <FlowDiagramCreator/>
-
+      <Navbar />
+      <FlowDiagramCreator />
     </>
   );
 }
