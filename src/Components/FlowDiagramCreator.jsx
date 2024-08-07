@@ -127,7 +127,7 @@ const FlowDiagramCreator = () => {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer `, // Replace with your OpenAI API key
+            Authorization: `Bearer `,
           },
           body: JSON.stringify({
             model: "gpt-4",
@@ -245,11 +245,19 @@ const FlowDiagramCreator = () => {
               placeholder="Enter your prompt..."
             />
             <div className="w-1/3 bg-[#091327] p-3 border border-[#5694FE] rounded-lg overflow-y-auto max-h-[150px]">
-              <h4 className="text-gray-300 font-semibold mb-2">Uploaded Files:</h4>
-              {uploadedFiles.map(file => (
-                <div key={file.id} className="flex justify-between items-center text-gray-300 mb-1">
+              <h4 className="text-gray-300 font-semibold mb-2">
+                Uploaded Files:
+              </h4>
+              {uploadedFiles.map((file) => (
+                <div
+                  key={file.id}
+                  className="flex justify-between items-center text-gray-300 mb-1"
+                >
                   <span>{file.name}</span>
-                  <button onClick={() => removeUploadedFile(file.id)} className="text-red-500">
+                  <button
+                    onClick={() => removeUploadedFile(file.id)}
+                    className="text-red-500"
+                  >
                     <X size={16} />
                   </button>
                 </div>
